@@ -11,7 +11,7 @@ Below are the Technologies and libraries used
 - jQuery
 - Git
 - Github repo
-- Bower
-- Yeoman
-- generator-jasmine
+- Bower  - for Jasmine setup
+- Yeoman - for Jasmine setup
+- generator-jasmine - for Jasmine setup
 - Jasmine TDD - for Unit Testing
