@@ -36,9 +36,7 @@
     border: none;
     margin: 0 4px 0 0;
 }
-select {
-    width: 100px
-}
+
 @media screen and (max-width: 699px) and (min-width: 20px) {
     .bar_wraper {
         max-width: 90% !important;
@@ -61,4 +59,11 @@ select {
 }
 #progress3{
     width:75%
+}
+.button_val{
+    height:30px;
+}
+select {
+    width: 100px;   
+    height:30px;
 }
