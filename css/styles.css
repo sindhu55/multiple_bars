@@ -1,0 +1,64 @@
+
+.bar_wraper {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.bar_box {
+    width: 100%;
+}
+.bar_box ul {
+    margin: 0;
+    padding: 0;
+}
+.bar_box ul li {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    list-style: none;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    line-height: 40px;
+    position: relative;
+}
+.color_code {
+    width: 80%;
+    background-color: #AFD7E6;
+    height: 40px;
+    position: absolute;
+}
+.bottom_buttons {
+    width: 100%;
+}
+.bottom_buttons ul li {
+    float: left !important;
+    width: auto;
+    border: none;
+    margin: 0 4px 0 0;
+}
+select {
+    width: 100px
+}
+@media screen and (max-width: 699px) and (min-width: 20px) {
+    .bar_wraper {
+        max-width: 90% !important;
+        margin: 0 auto !important;
+        height: auto !important;
+        clear: both;
+        padding: 20px;
+    }
+}
+.percent_val{
+    z-index: 999 !important;
+    position: absolute;
+}
+    
+#progress1{
+    width:25%
+}
+#progress2{
+    width:50%
+}
+#progress3{
+    width:75%
+}

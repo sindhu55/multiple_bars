@@ -7,72 +7,7 @@
 
 <meta charset="utf-8">
 <title>Multiple Bars</title>
-<style type="text/css">
-
-.bar_wraper {
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-.bar_box {
-    width: 100%;
-}
-.bar_box ul {
-    margin: 0;
-    padding: 0;
-}
-.bar_box ul li {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 10px;
-    list-style: none;
-    background-color: #FFF;
-    border: 1px solid #ccc;
-    line-height: 40px;
-    position: relative;
-}
-.color_code {
-    width: 80%;
-    background-color: #AFD7E6;
-    height: 40px;
-    position: absolute;
-}
-.bottom_buttons {
-    width: 100%;
-}
-.bottom_buttons ul li {
-    float: left !important;
-    width: auto;
-    border: none;
-    margin: 0 4px 0 0;
-}
-select {
-    width: 100px
-}
-@media screen and (max-width: 699px) and (min-width: 20px) {
-    .bar_wraper {
-        max-width: 90% !important;
-        margin: 0 auto !important;
-        height: auto !important;
-        clear: both;
-        padding: 20px;
-    }
-}
-.percent_val{
-    z-index: 999 !important;
-    position: absolute;
-}
-    
-#progress1{
-    width:25%
-}
-#progress2{
-    width:50%
-}
-#progress3{
-    width:75%
-}
-</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
@@ -110,47 +45,6 @@ select {
  
     <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
     
-    <script type="text/javascript">
-    // code for Dynamic behaviour of Multiple Bars 
-    $(document).ready(function(){
-        // code will load after complete loading of HTML
-
-        
-
-
-        // Click events 
-        $('.button_val').on('click',function(){
-            var selected_bar = $('#select_bar').val();
-            var current_value = parseInt($('#'+selected_bar).attr("data-val"));
-            var change_value = parseInt($(this).attr('data-change'));
-            var new_value = current_value + change_value;
-            var animation_time = 400;   // in milliseconds
-            if(new_value >= 100){
-                // Progress bar full
-                $('#'+selected_bar).next().text(new_value+'%');
-                $('#'+selected_bar).attr("data-val",new_value)
-                $('#'+selected_bar).animate({width:'100%'},animation_time,function(){
-                    $('#'+selected_bar).css('background-color','red');
-                });
-                
-                
-            }else if(new_value > 0){
-                // Active bar
-                $('#'+selected_bar).next().text(new_value+'%');
-                $('#'+selected_bar).attr("data-val",new_value)
-                $('#'+selected_bar).animate({width:new_value+'%'},animation_time);
-                $('#'+selected_bar).css('background-color','#AFD7E6');
-
-            }else if(new_value <= 0){
-                // Empty bar
-                $('#'+selected_bar).next().text('0%');
-                $('#'+selected_bar).attr("data-val",'0')
-                $('#'+selected_bar).animate({width:'0%'},animation_time);
-            }
-            
-            //console.log(current_value,change_value,new_value);
-        });
-    });
-    </script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
